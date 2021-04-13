@@ -30,6 +30,7 @@ list(APPEND LIB_TARGETS share)
 # CDEPS/streams
 add_library(streams STATIC ${cdeps_streams_files})
 add_library(cdeps::streams ALIAS streams)
+add_dependencies(streams cdeps::share)
 set_target_properties(streams PROPERTIES Fortran_MODULE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/mod)
 target_include_directories(streams PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/mod>
                                           $<INSTALL_INTERFACE:mod>)
