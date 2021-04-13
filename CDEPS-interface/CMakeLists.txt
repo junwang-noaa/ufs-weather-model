@@ -1,6 +1,6 @@
 # CDEPS compiler flags
 if(CMAKE_Fortran_COMPILER_ID MATCHES "GNU")
-  set(CMAKE_Fortran_FLAGS "-g -fbacktrace -ffree-line-length-none")
+  set(CMAKE_Fortran_FLAGS "-g -fbacktrace -ffree-line-length-none -DDISABLE_FoX")
   set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS}")
   set(CMAKE_Fortran_FLAGS_RELEASE "-O2")
   set(CMAKE_Fortran_FLAGS_DEBUG "-O0 -fcheck=bounds -ffpe-trap=invalid,zero,overflow,underflow" )
