@@ -237,7 +237,7 @@ elif [[ $MACHINE_ID = hera.* ]]; then
   ECFLOW_START=/scratch1/NCEPDEV/nems/emc.nemspara/soft/miniconda3/bin/ecflow_start.sh
   ECF_PORT=$(( $(id -u) + 1500 ))
 
-  QUEUE=batch
+  QUEUE=debug
   COMPILE_QUEUE=batch
 
   #ACCNR=fv3-cpu
@@ -419,8 +419,9 @@ if [[ $MACHINE_ID = hera.* ]] || [[ $MACHINE_ID = orion.* ]] || [[ $MACHINE_ID =
 else
   RTPWD=${RTPWD:-$DISKNM/NEMSfv3gfs/develop-${BL_DATE}}
 fi
+RTPWD=/scratch1/NCEPDEV/stmp4/Jun.Wang/FV3_RT/REGRESSION_TEST_INTEL
 
-INPUTDATA_ROOT=${INPUTDATA_ROOT:-$DISKNM/NEMSfv3gfs/input-data-20210518}
+INPUTDATA_ROOT=${INPUTDATA_ROOT:-$DISKNM/NEMSfv3gfs/input-data-20210210}
 INPUTDATA_ROOT_WW3=${INPUTDATA_ROOT}/WW3_input_data_20210503
 INPUTDATA_ROOT_BMIC=${INPUTDATA_ROOT_BMIC:-$DISKNM/NEMSfv3gfs/BM_IC-20210212}
 
