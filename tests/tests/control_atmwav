@@ -48,9 +48,8 @@ export LIST_FILES="sfcf000.nc \
                    RESTART/sfc_data.tile4.nc \
                    RESTART/sfc_data.tile5.nc \
                    RESTART/sfc_data.tile6.nc \
-                   20161004.000000.out_grd.glo_1deg \
-                   20161004.000000.out_pnt.points \
-                   20161004.000000.restart.glo_1deg"
+                   out_grd.glo_30m \
+                   out_pnt.points"
 
 export_fv3
 export NPZ=127
