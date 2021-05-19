@@ -110,6 +110,7 @@ export FNSOTC="'global_soiltype.statsgo.t766.1536.768.rg.grb',"
 export FNABSC="'global_mxsnoalb.uariz.t766.1536.768.rg.grb',"
 
 export CPL=.true.
+export NEMS_CONFIGURE="nems.configure.leapfrog_atm_wav.IN"
 export CPLWAV=.T.
 export GFSv16=.T.
 export atm_model='fv3'
