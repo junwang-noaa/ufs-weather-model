@@ -87,9 +87,13 @@ if [ $NEW_FIELDTABLE != '' ]; then
   cp    @[INPUTDATA_ROOT]/${inputdir}/$NEW_FIELDTABLE ./field_table
 fi
 
-if [ $CPLWAV = .T. ]; then
+if [ $CPLWAV == .T. ]; then
   cp    @[INPUTDATA_ROOT_WW3]/mod_def.* .
-  cp    @[INPUTDATA_ROOT_WW3]/rmp_src* .
+    if [ $GFSv16 == .T. ]; then
+       cp    @[INPUTDATA_ROOT_WW3]/rmp_gfsv16/rmp_src* .
+    else
+       cp    @[INPUTDATA_ROOT_WW3]/rmp_src* .
+    fi
 fi
 
 #inline post

@@ -81,7 +81,7 @@ export coupling_interval_sec=600
 export NEMS_CONFIGURE="nems.configure.blocked_atm_wav_2way.IN"
 
 #wave
-export ww3gline="'glo_1deg'  'no' 'no' 'CPL:native' 'CPL:native' 'no' 'no' 'no'   1  1  0.00 1.00  F"
+export ww3gline="'glo_1deg'  'no' 'no' 'CPL:native' 'no' 'no' 'no' 'no'   1  1  0.00 1.00  F"
 #
 export FV3_RUN=control_run.IN
 export CCPP_SUITE=FV3_GFS_v16

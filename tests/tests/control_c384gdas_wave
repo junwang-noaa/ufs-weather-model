@@ -53,8 +53,22 @@ export LIST_FILES="sfcf000.nc \
                    out_grd.aoc_9km"
 
 export_fv3
-export TASKS=312
-export TPN=$TPN_thrd
+
+export TASKS=480
+if [[ $MACHINE_ID = cheyenne.* ]]; then
+  export TPN=36
+elif [[ $MACHINE_ID = hera.* ]]; then
+  export TPN=20
+  export THRD=2
+elif [[ $MACHINE_ID = wcoss_cray ]]; then
+  export TPN=6
+else
+  export TPN=12
+fi
+
+
+#export TASKS=312
+#export TPN=$TPN_thrd
 export INPES=6
 export JNPES=8
 export WRITE_GROUP=1
@@ -90,18 +104,26 @@ export IAU_INC_FILES="'fv_increment3.nc','fv_increment6.nc','fv_increment9.nc'"
 export MODEL_INITIALIZATION=true
 export WLCLK=30
 
-export CPL=.true.
-export CPLWAV=.F.
-export wav_model='ww3'
-#wave
-export ww3gline="'gnh_10m' 'no' 'no' 'CPL:native' 'no'  'no' 'no' 'no'  1 10  0.00 1.00  F\n"
-export ww3gline="${ww3gline}'gsh_15m' 'no' 'no' 'CPL:native' 'no'  'no' 'no' 'no'  2 20  0.00 1.00  F\n"
-export ww3gline="${ww3gline}'aoc_9km' 'no' 'no' 'CPL:native' 'no'  'no' 'no' 'no'  3 30  0.00 1.00  F"
-
 export FNALBC="'global_snowfree_albedo.bosu.t766.1536.768.rg.grb',"
 export FNVETC="'global_vegtype.igbp.t766.1536.768.rg.grb',"
 export FNSOTC="'global_soiltype.statsgo.t766.1536.768.rg.grb',"
 export FNABSC="'global_mxsnoalb.uariz.t766.1536.768.rg.grb',"
+
+export CPL=.true.
+export CPLWAV=.T.
+export GFSv16=.T.
+export atm_model='fv3'
+export atm_petlist_bounds="0 311"
+export wav_model='ww3'
+export wav_petlist_bounds="312 479"
+export coupling_interval_sec=1800.0  #coupling time step, want it to be multiple of 1800 and FV3 time step
+#wave
+export NFGRIDS=1
+export NMGRIDS=3
+export CPLILINE="'glo_15mxt'  F F T F F F F"
+export ww3gline="'gnh_10m' 'no' 'no' 'CPL:glo_15mxt' 'no'  'no' 'no' 'no'  1 10  0.00 1.00  F\n"
+export ww3gline="${ww3gline}'gsh_15m' 'no' 'no' 'CPL:glo_15mxt' 'no'  'no' 'no' 'no'  2 20  0.00 1.00  F\n"
+export ww3gline="${ww3gline}'aoc_9km' 'no' 'no' 'CPL:glo_15mxt' 'no'  'no' 'no' 'no'  3 30  0.00 1.00  F"
 
 export MODEL_INITIALIZATION=true
 export FV3_RUN=control_run.IN
