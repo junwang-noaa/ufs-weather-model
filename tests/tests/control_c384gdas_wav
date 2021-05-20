@@ -128,4 +128,4 @@ export ww3gline="${ww3gline}'aoc_9km' 'no' 'no' 'CPL:glo_15mxt' 'no'  'no' 'no' 
 export MODEL_INITIALIZATION=true
 export FV3_RUN=control_run.IN
 export CCPP_SUITE=FV3_GFS_v16
-export INPUT_NML=control_gdas_wave.nml.IN
+export INPUT_NML=control_gdas_wav.nml.IN
