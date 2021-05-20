@@ -47,7 +47,9 @@ export LIST_FILES="sfcf000.nc \
                    RESTART/sfc_data.tile3.nc \
                    RESTART/sfc_data.tile4.nc \
                    RESTART/sfc_data.tile5.nc \
-                   RESTART/sfc_data.tile6.nc"
+                   RESTART/sfc_data.tile6.nc \
+                   out_grd.glo_1deg \
+                   out_pnt.points"
 
 export_fv3
 export NPZ=127
@@ -77,6 +79,7 @@ export wav_petlist_bounds="150 231"
 export coupling_interval_sec=600
 export NEMS_CONFIGURE="nems.configure.blocked_atm_wav_2way.IN"
 
+#
 export FV3_RUN=control_run.IN
 export CCPP_SUITE=FV3_GFS_v16
 export INPUT_NML=control.nml.IN

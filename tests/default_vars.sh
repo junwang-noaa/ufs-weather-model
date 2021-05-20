@@ -582,7 +582,7 @@ export IAU_DRYMASSFIXER=.false.
 #waves
 export WW3RSTDTHR='12'
 export WW3OUTDTHR='1'
-export WW3OUTPUTTYPE=' '
+export WW3OUTPUTTYPE=' 1'
 export OUTPARS_WAV="WND HS FP DP PHS PTP PDIR"
 export CPLILINE='$'
 export ICELINE='$'
@@ -590,7 +590,7 @@ export WINDLINE='$'
 export CURRLINE='$'
 export NFGRIDS=0
 export NMGRIDS=1
-export ww3gline="'glo_30m'  'no' 'no' 'CPL:native' 'no' 'no' 'no' 'no'   1  1  0.00 1.00  F"
+export ww3gline="'glo_1deg'  'no' 'no' 'CPL:native' 'no' 'no' 'no' 'no'   1  1  0.00 1.00  F"
 
 # Regional
 export WRITE_RESTART_WITH_BCS=.false.
@@ -652,7 +652,7 @@ export RESTART_N=${FHMAX}
 export CPLMODE='nems_orig'
 export cap_dbug_flag="0"
 export use_coldstart="false"
-export use_mommesh="false"
+export use_mommesh="true"
 export RUNTYPE='startup'
 
 # FV3 defaults
@@ -803,7 +803,7 @@ export RESTART_N=${FHMAX}
 export CPLMODE='nems_orig_data'
 export cap_dbug_flag="0"
 export use_coldstart="false"
-export use_mommesh="false"
+export use_mommesh="true"
 export RUNTYPE='startup'
 export flux_convergence='0.0'
 export flux_iteration='2'
