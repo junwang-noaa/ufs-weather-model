@@ -99,7 +99,6 @@ export FNVETC="'global_vegtype.igbp.t766.1536.768.rg.grb',"
 export FNSOTC="'global_soiltype.statsgo.t766.1536.768.rg.grb',"
 export FNABSC="'global_mxsnoalb.uariz.t766.1536.768.rg.grb',"
 
-export CPL=.true.
 export CPLWAV=.true.
 export NEMS_CONFIGURE="nems.configure.leapfrog_atm_wav.IN"
 export atm_model='fv3'
