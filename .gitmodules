@@ -1,7 +1,9 @@
 [submodule "FV3"]
 	path = FV3
-	url = https://github.com/NOAA-EMC/fv3atm
-	branch = production/GFS.v16
+	#url = https://github.com/NOAA-EMC/fv3atm
+	#branch = production/GFS.v16
+	url = https://github.com/junwang-noaa/fv3atm
+	branch = butterfly
 [submodule "NEMS"]
 	path = NEMS
 	url = https://github.com/NOAA-EMC/NEMS
