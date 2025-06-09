@@ -8,7 +8,7 @@ nhours_fcst:             @[FHMAX]
 fhrot:                   @[FHROT]
 
 dt_atmos:                @[DT_ATMOS]
-restart_interval:        @[RESTART_INTERVAL]
+restart_fh:        @[RESTART_FH]
 
 quilting:                @[QUILTING]
 quilting_restart:        @[QUILTING_RESTART]

@@ -11,7 +11,7 @@ ENS_SPS:                 .false.
 dt_atmos:                @[DT_ATMOS]
 calendar:                'julian'
 memuse_verbose:          .false.
-restart_interval:        @[RESTART_INTERVAL]
+restart_fh:        @[RESTART_FH]
 output_1st_tstep_rst:    .false.
 write_dopost:            @[WRITE_DOPOST]
 ideflate:                @[IDEFLATE]

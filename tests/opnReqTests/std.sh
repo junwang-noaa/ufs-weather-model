@@ -10,7 +10,7 @@ if [[ $application == 'global' ]]; then
     NODES=$(((TASKS+TPN-1)/TPN))
   fi
   RESTART_N=$(( FHMAX/2 ))
-  RESTART_INTERVAL="${RESTART_N} -1"
+  RESTART_FH="${RESTART_N} -1"
 elif [[ $application == 'regional' ]]; then
   if [[ $CI_TEST == 'true' ]]; then
     INPES=10
@@ -31,7 +31,7 @@ elif [[ $application == 'cpld' ]]; then
     NODES=$(((TASKS+TPN-1)/TPN))
   fi
   RESTART_N=$(( FHMAX/2 ))
-  RESTART_INTERVAL="${RESTART_N} -1"
+  RESTART_FH="${RESTART_N} -1"
 elif [[ $application == 'atmw' ]]; then
   if [ $CI_TEST == 'true' ]; then
     INPES=3
@@ -41,7 +41,7 @@ elif [[ $application == 'atmw' ]]; then
     NODES=$(((TASKS+TPN-1)/TPN))
   fi
   RESTART_N=$(( FHMAX/2 ))
-  RESTART_INTERVAL="${RESTART_N} -1"
+  RESTART_FH="${RESTART_N} -1"
 fi
 
 #outdated (test $CI_TEST == 'true') && source $PATHRT/opnReqTests/cmp_proc_bind.sh

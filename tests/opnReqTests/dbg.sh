@@ -21,7 +21,7 @@ elif [[ $application == 'regional' ]]; then
 elif [[ $application == 'cpld' ]]; then
   FHMAX=3
   DAYS=0.125
-  RESTART_INTERVAL=${FHMAX}
+  RESTART_FH=${FHMAX}
   RESTART_N=${FHMAX}
   OUTPUT_FH="0 ${FHMAX}"
   AOD_FRQ=030000
@@ -40,7 +40,7 @@ elif [[ $application == 'atmw' ]]; then
   WW3_RSTDTHR=3
   WW3_DT_2_RST="$(printf "%02d" $(( ${WW3_RSTDTHR}*3600 )))"
   DAYS=0.125
-  RESTART_INTERVAL=${FHMAX}
+  RESTART_FH=${FHMAX}
   RESTART_N=${FHMAX}
   OUTPUT_FH="0 ${FHMAX}"
   LIST_FILES=$(echo -n $LIST_FILES | sed -E "s/sfcf012/sfcf003/g" \
